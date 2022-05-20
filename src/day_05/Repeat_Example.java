@@ -4,20 +4,15 @@ public class Repeat_Example {
 public static void main(String[] args) {
 ///	String input_str;
 ///	int b = 0;
-	int c ;
-		Scanner input = new Scanner(System.in);
-		try {
-		c = input.nextInt();	
-		}
-		catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
-		finally
-		{	System.out.println("is OK 2 GO");
-/////			b++;
+	Scanner input = new Scanner(System.in);
+	while(true) {
+		if(input.hasNextInt()) {
+			System.out.println("OK 2 GO");
 			input.close();
+			break;
 		}
-/////	System.out.println("integer only!");
-	
+		System.out.println("try again");
+		input = new Scanner(System.in);
 	}
+}
 }
